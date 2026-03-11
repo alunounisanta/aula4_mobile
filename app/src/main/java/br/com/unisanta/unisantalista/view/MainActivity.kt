@@ -28,14 +28,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val edtDesc = findViewById<EditText>(R.id.edt_description)
         val edtNome = findViewById<EditText>(R.id.edt_nome)
+
         val btnCadastrar = findViewById<Button>(R.id.btn_cadastrar)
         val fabLista = findViewById<FloatingActionButton>(R.id.fab_lista)
 
         btnCadastrar.setOnClickListener {
-            val tarefa = Tarefa(edtNome.text.toString())
+            val tarefa = Tarefa(edtNome.text.toString(), edtDesc.text.toString(), false)
             dao.postUser(tarefa)
-            Toast.makeText(this, "Cadastro Ok", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Tarefa criada com sucesso", Toast.LENGTH_SHORT).show()
             edtNome.text.clear()
         }
 

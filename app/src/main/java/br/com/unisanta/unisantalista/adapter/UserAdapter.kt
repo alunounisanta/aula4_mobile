@@ -13,7 +13,7 @@ class UserAdapter(private val tarefas:List<Tarefa>):
 
         class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
             val txvNomeContato: TextView = itemView.findViewById(R.id.txv_nome_contato)
-
+            //val txvDescricaoTarefa: TextView = itemView.findViewById()
 
         }
 
