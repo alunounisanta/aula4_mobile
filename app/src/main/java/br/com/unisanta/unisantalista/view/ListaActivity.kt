@@ -8,7 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.unisanta.unisantalista.R
-import br.com.unisanta.unisantalista.adapter.UserAdapter
+import br.com.unisanta.unisantalista.adapter.UserAdapterV2
 import br.com.unisanta.unisantalista.model.TarefaDaoImpl
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -28,7 +28,7 @@ class ListaActivity : AppCompatActivity() {
         val rvContatos:RecyclerView = findViewById<RecyclerView>(R.id.rv_contatos)
         val users = dao.getUsers()
         rvContatos.layoutManager = LinearLayoutManager(this)
-        rvContatos.adapter = UserAdapter(users)
+        rvContatos.adapter = UserAdapterV2(users)
 
         val fabVolta = findViewById<FloatingActionButton>(R.id.fab_volta)
         fabVolta.setOnClickListener {
