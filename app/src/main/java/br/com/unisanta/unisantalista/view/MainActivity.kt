@@ -10,13 +10,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import br.com.unisanta.unisantalista.R
-import br.com.unisanta.unisantalista.model.User
-import br.com.unisanta.unisantalista.model.UserDaoImpl
+import br.com.unisanta.unisantalista.model.Tarefa
+import br.com.unisanta.unisantalista.model.TarefaDaoImpl
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
-    private val dao = UserDaoImpl()
+    private val dao = TarefaDaoImpl()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         val fabLista = findViewById<FloatingActionButton>(R.id.fab_lista)
 
         btnCadastrar.setOnClickListener {
-            val user = User(edtNome.text.toString())
-            dao.postUser(user)
+            val tarefa = Tarefa(edtNome.text.toString())
+            dao.postUser(tarefa)
             Toast.makeText(this, "Cadastro Ok", Toast.LENGTH_SHORT).show()
             edtNome.text.clear()
         }

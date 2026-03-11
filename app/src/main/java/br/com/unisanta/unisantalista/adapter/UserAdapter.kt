@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.unisanta.unisantalista.R
-import br.com.unisanta.unisantalista.model.User
+import br.com.unisanta.unisantalista.model.Tarefa
 
-class UserAdapter(private val users:List<User>):
+class UserAdapter(private val tarefas:List<Tarefa>):
     RecyclerView.Adapter<UserAdapter.ViewHolder>() {
 
         class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -23,11 +23,11 @@ class UserAdapter(private val users:List<User>):
     }
 
     override fun getItemCount(): Int {
-        return users.size
+        return tarefas.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val user = users[position]
+        val user = tarefas[position]
         holder.txvNomeContato.text = user.name
 
     }

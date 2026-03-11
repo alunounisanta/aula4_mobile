@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.unisanta.unisantalista.R
 import br.com.unisanta.unisantalista.adapter.UserAdapter
-import br.com.unisanta.unisantalista.model.UserDaoImpl
+import br.com.unisanta.unisantalista.model.TarefaDaoImpl
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListaActivity : AppCompatActivity() {
 
-    private val dao = UserDaoImpl()
+    private val dao = TarefaDaoImpl()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
