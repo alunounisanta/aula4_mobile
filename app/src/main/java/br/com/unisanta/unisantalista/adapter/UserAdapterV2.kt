@@ -30,9 +30,13 @@ class UserAdapterV2(private val tarefas:List<Tarefa>):
         val user = tarefas[position]
         holder.txvNomeContato.text = user.name
         holder.txvDescricaoTarefa.text = user.description
+//        holder.txvIsFinihed.text = user.isFinished.toString()
 
-
-        holder.txvIsFinihed.text = user.isFinished.toString()
+        if (user.isFinished) {
+            holder.txvIsFinihed.text = "Finalizado"
+        } else {
+            holder.txvIsFinihed.text = "Pendente"
+        }
     }
 
 }
